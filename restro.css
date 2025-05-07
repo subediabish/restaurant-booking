@@ -1,0 +1,225 @@
+:root {
+    --primary: #873e23;
+    --secondary: #76b5c5;
+    --dark: #320c01;
+    --light: #f8f1e9;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 500px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(50, 12, 1, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(118, 181, 197, 0.3);
+}
+
+.header h1 {
+    color: var(--primary);
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.tagline {
+    color: var(--dark);
+    margin-top: 0.5rem;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    border-bottom: 1px solid rgba(118, 181, 197, 0.3);
+}
+
+.main-nav a {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+}
+
+h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 2px rgba(118, 181, 197, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #6e321d;
+}
+
+#logoutBtn {
+    background-color: var(--dark);
+}
+
+#logoutBtn:hover {
+    background-color: #1a0600;
+}
+
+.hidden {
+    display: none;
+}
+
+#confirmation {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgba(118, 181, 197, 0.3);
+}
+
+.confirmation-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.confirmation-header svg {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.reservation-details {
+    background-color: rgba(118, 181, 197, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.notice {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(135, 62, 35, 0.1);
+    border-left: 4px solid var(--primary);
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#userInfo {
+    background-color: rgba(118, 181, 197, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.about-content {
+    background-color: rgba(118, 181, 197, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 1.2rem;
+}
+
+.back-btn {
+    background-color: var(--dark) !important;
+    margin-top: 1.5rem !important;
+}
+
+.back-btn:hover {
+    background-color: #1a0600 !important;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+}

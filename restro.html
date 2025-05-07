@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellaire Sushi Corner | Reservations</title>
+    <link rel="stylesheet" href="restro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bellaire Sushi Corner</h1>
+            <p class="tagline">Authentic Japanese Dining Experience</p>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="#" id="aboutBtn">About Us</a>
+            <a href="#" id="reserveBtn" class="active">Reservations</a>
+        </nav>
+        
+        <div id="aboutSection" class="hidden">
+            <h2>About Bellaire Sushi Corner</h2>
+            <div class="about-content">
+                <p>Since 2009, Bellaire Sushi Corner has been proudly serving fresh, handcrafted sushi in the heart of Bellaire, Texas. Known for its warm hospitality and creative culinary approach, our restaurant offers a unique fusion of traditional Japanese flavors with global influences.</p>
+                
+                <p>At Bellaire, sushi isn't just a dish—it's an experience. From the delicate simplicity of classic nigiri to bold, flavor-packed rolls, our menu features something for every palate. We specialize in innovative fusion rolls inspired by world cuisines—imagine sushi with a zesty Mexican twist, a fiery Indian kick, or the fragrant spices of Thai cooking. Whether you're a sushi purist or an adventurous foodie, you'll find a variety of options to satisfy your cravings.</p>
+                
+                <p>Every dish is crafted with the finest ingredients, a deep respect for tradition, and a passion for flavor. Come enjoy a cozy, relaxed dining atmosphere by the lake and discover why Bellaire Sushi Corner has been a local favorite for over a decade.</p>
+            </div>
+            <button type="button" class="back-btn">Back to Reservations</button>
+        </div>
+        
+        <div id="loginSection">
+            <h2>Welcome Back</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="button" id="loginBtn">Login</button>
+                <p class="switch-form">Don't have an account? <a href="#" id="showRegister">Register</a> or 
+                <a href="#" id="continueAsGuest">Continue as Guest</a></p>
+            </form>
+            
+            <form id="registerForm" class="hidden">
+                <h2>Join Us</h2>
+                <div class="form-group">
+                    <label for="regName">Full Name:</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email:</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPhone">Phone:</label>
+                    <input type="tel" id="regPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password:</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+                <button type="button" id="registerBtn">Register</button>
+                <p class="switch-form">Already a member? <a href="#" id="showLogin">Login</a></p>
+            </form>
+        </div>
+        
+        <form id="reservationForm" class="hidden">
+            <h2 id="reservationTitle">Reserve Your Table</h2>
+            <div id="userInfo" class="hidden"></div>
+            
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" min="1" max="12" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <select id="time" required>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="10:30">10:30 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="11:30">11:30 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="12:30">12:30 PM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="13:30">1:30 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="14:30">2:30 PM</option>
+                    <option value="15:00">3:00 PM</option>
+                    <option value="15:30">3:30 PM</option>
+                    <option value="16:00">4:00 PM</option>
+                    <option value="16:30">4:30 PM</option>
+                    <option value="17:00">5:00 PM</option>
+                    <option value="17:30">5:30 PM</option>
+                    <option value="18:00">6:00 PM</option>
+                    <option value="18:30">6:30 PM</option>
+                    <option value="19:00">7:00 PM</option>
+                    <option value="19:30">7:30 PM</option>
+                    <option value="20:00">8:00 PM</option>
+                    <option value="20:30">8:30 PM</option>
+                    <option value="21:00">9:00 PM</option>
+                    <option value="21:30">9:30 PM</option>
+                    <option value="22:00">10:00 PM</option>
+                    <option value="22:30">10:30 PM</option>
+                    <option value="23:00">11:00 PM</option>
+                </select>
+                
+            </div>
+            
+            <div id="guestFields">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone">
+                </div>
+            </div>
+            
+            <button type="button" id="bookBtn">Confirm Reservation</button>
+            <button type="button" id="logoutBtn" class="hidden">Logout</button>
+        </form>
+        
+        <div id="confirmation" class="hidden">
+            <div class="confirmation-header">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#873e23">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <h2>Reservation Confirmed!</h2>
+            </div>
+            <div class="reservation-details">
+                <p id="reservationDetails"></p>
+            </div>
+            <div class="notice">
+                <p>Please note: No-shows will incur a minimum $10 charge.</p>
+                <p>A confirmation has been sent to your email.</p>
+            </div>
+            <button type="button" id="newReservationBtn">Make Another Reservation</button>
+        </div>
+    </div>
+
+    <script src="restro.js"></script>
+</body>
+</html>
